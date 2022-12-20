@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="urf-8">
+    <style type="text/css">
+        /* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+        th {
+            background-image: url('D:/TestLinkUnder/anh/Screenshot 2022-11-08 172115.png');
+            color: rgb(147, 147, 215);
+        }
+
+        td {
+            background-image: url('D:/TestLinkUnder/anh/Screenshot 2022-11-08 172335.png');
+            color: white
+        }
+
+        a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        td:hover {
+            background-image: url('D:/TestLinkUnder/anh/bg_menu.gif');
+            background-repeat: repeat;
+
+        }
+
+        /* ////////////////////////////////////////////////////////////////////////////////////////// */
+
+        ul {
+            list-style-type: none;
+            padding:0;
+        }
+        ul > li{
+            float: left;
+        }
+        ul > li > ul{
+            display: none;
+        }
+        ul > li:hover ul{
+            display: block;
+            position: absolute;
+            right:-203px;
+            top:24px
+        }
+        ul li{
+            background: pink;
+            color: red;
+            text-decoration: none;
+            width: 200px;
+            border: 1px solid black;
+            position: relative;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+
+    <table style="width: 100%;" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>The loai phim</th>
+        </tr>
+        <tr>
+            <td><a href="#">Hanh dong</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">Kinh di</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">nguoi lon</a></td>
+        </tr>
+        <tr>
+            <th>Tong: 1000</th>
+        </tr>
+    </table>
+    <br><br><br><br>
+    <!-- ////////////////////////////////////////////////////////////////////////////// -->
+
+    <ul>
+        <li>
+            <a href="#">
+                Hanh dong
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                Kinh di
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        Hai huoc
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        tinh cam
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                Nguoi lon
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>

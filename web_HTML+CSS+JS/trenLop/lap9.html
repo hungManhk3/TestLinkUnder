@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tong {
+            background-color: blue;
+            width: 100%;
+        }
+
+        #tren {
+            background-color: antiquewhite;
+            width: 100%;
+            height: 100px;
+        }
+
+        #tren>.phai {
+            background-color: orange;
+            float: left;
+            width: 10%;
+            height: 100px;
+            text-align: center;
+
+        }
+
+        #tren>.trai1 {
+            background-color: rgb(31, 111, 122);
+            float: left;
+            width: 90%;
+            height: 100px;
+            text-align: center;
+            font-size: 30px;
+
+        }
+        #tren>.trai1>.trai2 {
+            background-color: rgb(31, 122, 84);
+            float: left;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 10px;
+
+        }
+        #duoi{
+            background-color: green;
+            height: 1000px;
+            width: 100%;
+            position: relative;
+        }
+        #duoi>.trai{
+            background-color: aquamarine;
+            width: 6%;
+            height: 1000px;
+            float: left;
+        }
+        #duoi>.giua{
+            background-color: rgb(176, 42, 162);
+            width: 88%;
+            height: 1000px;
+            float: left;
+        }
+        #duoi>.phai{
+            background-color: aquamarine;
+            width: 6%;
+            height: 1000px;
+            float: left;
+        }
+        input[type=text]{
+            width: 300px;
+            margin-left: 600px;
+        }
+
+        input[type=number]{
+            width: 300px;
+            margin-left: 600px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="tong">
+        <div id="tren">
+            <div class="phai">
+                Trung tâm đào tạo Lập trình viên Quốc tế HN-Aptech
+            </div>
+            <div class="trai1">
+                <div class="trai2"><span style="top: 20px;">HN-Aptech</span></div>
+            </div>
+        </div>
+        <div id="duoi">
+            <div class="trai">
+
+            </div>
+            <div class="giua">
+                <form name="f" method="post">
+                    <hr font color="red" size="20" style="border-left: 20px;" >
+                    <h1 style="text-align: center;">Phiếu đăng kí tham dự hội thảo</h1>
+                    <br><br><br>
+
+                    <fieldset>
+                        <legend style="color: blue;">Thông tin cá nhân</legend>
+                        Ten 
+                        <input type="text" name="txtTen"><br>
+                        Ma Mon Hoc
+                        <input type="text" name="txtMMH"><br>
+                        Lop
+                        <input type="text" name="txtLop"><br>   
+                    </fieldset>
+                    <fieldset >
+                        <legend style="color: blue;">Thông tin khác</legend>
+                        Ngay sinh
+                        <input type="number" name="nNgaySinh"><br>
+                        Tuoi
+                        <input type="number" name="nTuoi">
+                    </fieldset>
+                    <br>
+                    <input type="submit" value="Process" onclick=" return check();" style="margin-left: 600px;">
+                    <input type="reset" value="Reset" style="margin-left: 20px;">
+                </form>
+                <script>
+                    function check(){
+                        if(f.txtTen.value == 0){
+                            alert('Khong duoc de trong');
+                            return false;
+                        }
+                        if(f.txtMMH.value == 0){
+                            alert('Khong duoc de trong1');
+                            return false;
+                        }
+                        if(f.txtLop.value == 0){
+                            alert('Khong duoc de trong2');
+                            return false;
+                        }
+                        
+                        if(f.nNgaySinh.value == 0){
+                            alert('Khong duoc de trong3');
+                            return false;
+                        }
+                        
+                        if(f.nTuoi.value == 0){
+                            alert('Khong duoc de trong4');
+                            return false;
+                        }
+                        d=0;
+                        for(i=0;i<f.txtTen.length;i++){
+                            d++;
+                           if(d<2){
+                            alert('Khong nhap duoi 2 tu');
+                            return false;
+                           }
+                        }
+                    }
+                </script>
+            </div>
+            <div class="phai">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

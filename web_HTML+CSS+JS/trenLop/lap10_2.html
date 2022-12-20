@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Ví dụ trang web</title>
+        <meta http-equiv="content-type" 
+        content="charset=utf-8">
+        
+    </head>
+    <body>
+        <form name="f">
+            <h1 align="center">Thông tin đăng ký</h1>
+            <table align="center">
+                <tr>
+                    <td>Họ và tên:</td>
+                    <td><input type=text name=txtHoVaTen></td>
+                </tr>
+                <tr>
+                    <td>Số bí mật:</td>
+                    <td><input type=text name=txtSoBiMat></td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh:</td>
+                    <td><input type=text name=txtNgaySinh></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type=text name=txtEmail></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Gửi đi"
+                        onClick="return check()">
+                    </td>
+                    <td><input type=reset value="Hủy bỏ"></td>
+                </tr>
+            
+            </table>
+            <script>
+                function check(){
+                    if (f.txtHoVaTen.value==""){
+                        alert("Họ và tên phải nhập");
+                        f.txtHoVaTen.focus();
+                        return false;
+                    }
+                    r =/^[A-Za-z]+[ ]+[A-Za-z ]+$/  //kiem tra ho va ten
+                    if (r.test(f.txtHoVaTen.value)==false){
+                        alert("Họ và tên chỉ bao gồm chữ cái và dấu cách");
+                        f.txtHoVaTen.focus();
+                        return false;
+                    }
+                    if (f.txtSoBiMat.value==""){
+                        alert("Số bí mật phải nhập vào");
+                        f.txtSoBiMat.focus();
+                        return false;
+                    }
+                    r=/^(-)?\d+$/  //kiem tra so
+                    if (r.test(f.txtSoBiMat.value)==false){
+                        alert("Bạn chỉ được nhập số!");
+                        f.txtSoBiMat.focus();
+                        return false;
+                    }
+                    if (f.txtNgaySinh.value==""){
+                        alert("Phải nhập Ngày sinh");
+                        f.txtNgaySinh.focus();
+                        return false;
+                    }
+                    //      10/03/1980
+                    r = /^\d{2}\/\d{2}\/\d{4}$/
+                    if(r.test(f.txtNgaySinh.value)==false){
+                        alert("Ngày sinh phải theo định dạng dd/mm/yyyy");
+                        f.txtNgaySinh.focus();
+                        return false;
+                    }
+                    if (f.txtEmail.value==""){
+                        alert("Email phải nhập!");
+                        f.txtEmail.focus();
+                        return false;
+                    }
+                    //  trungph1201@gmail.com  trung.phan@ezcloud.vn
+                    //  trungph@huce.edu.vn
+                    r = /^\w+\@\w+(\.\w{2,3})+$/
+                    if (r.test(f.txtEmail.value)==false){
+                        alert("Email phải có dạng name@domain");
+                        f.txtEmail.focus();
+                        return false;
+                    }
+                    //biểu thức của số di động
+                    //r = /^0[1-9]\d{8}$/
+                    //r =  /^(?=(.*[a-z]){3,})(?=(.*[A-Z]){2,})(?=(.*[0-9]){2,})(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,}$    
+
+                }
+            </script>
+        </form>
+    </body>
+</html>

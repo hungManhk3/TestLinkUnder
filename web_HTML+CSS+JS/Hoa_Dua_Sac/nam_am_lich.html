@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #div_tong{
+        background-color: pink;
+        width: 300px;
+        height: 100px;
+        left: 400px;
+        margin-left: 300px;
+        position: relative;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div id="div_tong">
+    <form>
+        <input type="number" id="nbNam">
+        <br>
+        <button type="button" onclick="in_ra()">kiem co bo nhieu ngay trong thang</button>
+    </form>
+    <div id="ket_qua"></div>
+    <script>
+        function in_ra() {
+            let nam = document.getElementById('nbNam').value;
+        }
+    </script>
+    </div>
+
+</body>
+
+</html>

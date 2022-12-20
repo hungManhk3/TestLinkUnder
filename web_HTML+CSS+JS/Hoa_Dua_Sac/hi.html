@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang đăng nhập</title>
+    
+</head>
+<body>
+    <form action="" name="f">
+        <h1 align="center">Trang đăng nhập</h1>
+        <table align="center">
+            <tr  style="width: 100%; text-align: center;" >
+                <td>Tên đăng nhập:</td>
+                <td><input type="text" name="txtTendangnhap" ></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td><input type="password" name="txtPassword"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><input type="submit" value="Đăng nhập" onclick="return check() "></td>
+                <td><input type="reset" value="Hủy"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        
+        function check(){
+            if(f.txtTendangnhap.value==""){
+                alert('Mời nhập tên đăng nhập');
+                f.txtTendangnhap.focus();
+                return false;
+            }
+            if(f.txtPassword.value==""){
+                alert('Mời nhập mật khẩu');
+                f.txtPassword.focus();
+                return false;
+            }
+            i=0;
+        j=0;
+            r=/^[A-Za-z]{6,20}$/;
+             if(r.test(f.txtTendangnhap.value)==false){
+                 alert('nhập theo quy tắc tên + chữ cái đầu họ + chữ cái đầu tên đệm');
+                 f.txtTendangnhap.focus();
+                    j++;
+                 return false;
+                 
+             }
+            r=/^d+$/;
+            if(r.test(f.txtPassword.value)==false){
+                alert('nhập mật khẩu sai !');
+                f.txtPassword.focus();
+                 i++;
+                return false;
+               
+            }
+            if(i>3){
+                alert('bạn nhập sai quá 3 lần, vui lòng chờ 30 giây để đăng nhập');
+            }
+            if(j>3){
+                alert('bạn nhập sai quá 3 lần, vui lòng chờ 30 giây để đăng nhập');
+            }
+        }
+    </script>
+</body>
+</html>

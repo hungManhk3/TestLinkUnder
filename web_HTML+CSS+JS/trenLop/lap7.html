@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="f" method="POST">
+        <h1 align=center style="color: rgb(22, 184, 22); ">Subcription Form </h1>
+        <fieldset>
+            <legend>
+                Personal Information
+            </legend>
+            Last Name: <input type="text" size="20" name="txtLastName">
+            First Name: <input type="text" size="20" name="txtFirstName">
+            <br><br>
+            <input type="radio" name="rdGT" value="1"> Male
+            <input type="radio" name="rdGT" value="0"> Female
+            <br><br>
+            Address:
+            <br>
+            <textarea cols="30" rows="6" name="are"></textarea>
+
+        </fieldset>
+        <fieldset>
+            <legend>
+                Magazines subscription for
+            </legend>
+            <input type="checkbox" name="cbMagazines" value="TIME"> TIME
+            <input type="checkbox" name="cbMagazines" value="Newsweek"> Newsweek
+            <input type="checkbox" name="cbMagazines" value="Sunday"> Sunday
+            <input type="checkbox" name="cbMagazines" value="Vogue"> Vogue
+            <input type="checkbox" name="cbMagazines" value="People"> People
+        </fieldset>
+        <fieldset>
+            <legend>
+                Duration
+            </legend>
+            <input type="radio" name="rdDuration" value="1"> 1 Year
+            <input type="radio" name="rdDuration" value="3"> 3 Years
+            <input type="radio" name="rdDuration" value="5"> 5 Years
+        </fieldset>
+        <fieldset>
+            <legend>
+                Payment options
+            </legend>
+            <input type="radio" name="rdPay" value="1"> Demand Draft
+            <input type="radio" name="rdPay" value="0"> Credit Cart
+        </fieldset><br>
+        <input type="submit" value="Process" onclick=" return check();">
+        <input type="reset" value="Reset">
+    </form>
+    <script>
+        function check() {
+            if (f.txtLastName.value == 0) {
+                alert("the last name field can not be empty");
+                return false;
+            }
+            if (f.txtFirstName.value == 0) {
+                alert("the first name field can not be empty");
+                return false;
+            }
+            if (f.are.value == 0) {
+                alert("the address name field can not be empty");
+                return false;
+            }
+            m = 0;
+            for (i = 0; i < f.rdGT.length; i++) {
+                if (f.rdGT[i].checked) { m++; }
+                if (m == 0) {
+                    alert(" choose at least one box")
+                    return false;
+                }
+            }
+            m=0;
+            for (i = 0; i < f.cbMagazines.length; i++) {
+                if(f.cbMagazines[i].checked) m++;
+                if(m==0){
+                    alert(" choose at least one box")
+                    return false;
+                }
+            }
+            m=0;
+            for (i = 0; i < f.rdDuration.length; i++) {
+                if (f.rdDuration[i].checked) { m++; }
+                if (m == 0) {
+                    alert(" choose at least one box")
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

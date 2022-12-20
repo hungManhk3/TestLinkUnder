@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> bao hoa cuc</title>
+    <style type="text/css">
+        #div_tong {
+            width: 100%;
+            height: 800px;
+            background-color: aliceblue;
+        }
+
+        #div_tren {
+            width: 100%;
+            height: 20%;
+            background-color: red;
+        }
+
+        #div_tren>.trai {
+            width: 50%;
+            height: 100%;
+            background: yellow;
+            float: left;
+        }
+
+        #div_tren>.phai {
+            width: 50%;
+            height: 100%;
+            background: rgb(225, 170, 199);
+            float: left;
+        }
+
+        #div_tren>.phai>.tren {
+            width: 100%;
+            height: 90%;
+            background: rgb(73, 55, 110);
+            float: left;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        #div_tren>.phai>.duoi {
+            width: 100%;
+            height: 10%;
+            background: rgb(34, 119, 90);
+            float: left;
+            text-align: right;
+
+        }
+
+        /* div duoi * inline, internal , external */
+        #div_duoi {
+            width: 100%;
+            height: 80%;
+            background-color: green;
+        }
+
+        #div_duoi>.trai {
+            width: 20%;
+            height: 100%;
+            background-color: rgb(200, 140, 49);
+            float: left;
+
+        }
+
+        #div_duoi>.giua {
+            width: 70%;
+            height: 100%;
+            background-color: rgb(210, 231, 21);
+            float: left;
+            text-align:left;
+            
+        }
+
+        #div_duoi>.phai {
+            width: 10%;
+            height: 100%;
+            background-color: rgb(56, 18, 194);
+            float: left;
+            position: relative;
+        }
+        
+    </style>
+</head>
+ <!-- relative absolud fixed  -->
+
+<body>
+    <div id="div_tong">
+        <div id="div_tren">
+            <div class="trai" style="position: ralative;">
+                <img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\hoaCanh.png" alt="" style="height:100% ;" style="position: absolute; height: 200px; z-index: 99;">
+            </div>
+            <div class="phai">
+                <div class="tren">
+                    <from>
+                        <select>
+                            <option>Hoi cay canh ha noi</option>
+                        </select>
+                        <button>hi hi</button>
+                    </from>
+                </div>
+                <div class="duoi">
+                    <a href=""><img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\hoa.png" alt=""></a>
+                    <a href=""><img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\tinTuc.png" alt=""></a>
+                    <a href=""><img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\hopThu.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div id="div_duoi">
+            <div class="trai" style="position:relative;">
+                <img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\hoaCuc.png" alt="" style="position:absolute; bottom:0px;width: 110%;">
+                <img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\buom1.png" alt="" style="position:fixed; top: 160px; left: 320px;z-index: 99;">
+            </div>
+            <div class="giua" style="position: relative;"><pre style="position: absolute; left:-50px;"> 
+                We get lost, we can get high
+                You got me gone, I feel alive
+                Anywhere, anyway I will love you
+                (You, you, you, you, I will love you)
+                We rule the world, just you and I
+                Don't let me down, we walk the line
+                When everything's gone wrong
+                I take a shot for you (You, you, you, you, you, you)
+                Give me your love
+                Give me love
+                Never let you go, go
+                Give me your love
+                Give me your love
+                Never let you go
+                Give me your love
+                Give me your love
+                Never let you go, go
+                We get lost, we can get high
+                You got me gone, I feel alive
+                Anywhere, anyway I will love you
+                (You, you, you, you, I will love you)
+                We rule the world, just you and I
+                Don't let me down, we walk the line
+                When everything's gone wrong
+                I take a shot for you (You, you, you, you, you, you)
+                Give me your love
+                Give me love
+                Never let you go, go
+                Give me your love
+                Give me your love
+                Never let you go
+                </pre></div>
+            <div class="phai">
+                <img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\bong.png" alt="" style="position:absolute;bottom: 0px; right: 0px; width: 100%;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

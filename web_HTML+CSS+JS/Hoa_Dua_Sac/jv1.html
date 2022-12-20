@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f" method="GET">
+        <input type="text " name="txt1">
+        <input type="button" name="cmd" value="copy" onclick="copy()">
+        <input type="button" value="reverse" onclick="reverse()">
+        <input type="button" value="upper" onclick="upper()" >
+        <input type="button" value="lower" onclick="lower()">
+        <input type="text" name="txt2">
+    </form>
+    <script>
+        function copy(){
+            f.txt2.value=f.txt1.value
+        }
+        function reverse(){
+            str=f.txt1.value
+            str1=""
+            for(i=str.length-1;i>=0;i--){
+                str1+=str.charAt(i);
+            }
+            f.txt2.value=str1;
+        }
+        function upper(){
+            str=f.txt1.value
+            str1=""
+            for(i=0;i<=str.length;i++){
+                str1+=str.charAt(i).toUpperCase();
+            }
+            f.txt2.value=str1
+        }
+        function lower(){
+            str = f.txt1.value
+            str1=""
+            for(i=0;i<=str.length;i++){
+            
+                str1+=str.charAt(i).toLowerCase();
+            }
+            f.txt2.value=str1;
+        }
+    </script>
+    <iframe width="942" height="530" src="https://www.youtube.com/embed/G4Rju7ciX1g" title="Yến ơi - Lena. ft Tều Phạm | ( Remix Nghệ Sĩ Indie ) | Music Moments" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+</body>
+</html>

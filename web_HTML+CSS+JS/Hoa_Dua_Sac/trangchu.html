@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #banner {
+            width: calc(1011px + 36px);
+            height: calc(200px + 26px);
+        }
+
+        .left-menu {
+            width: calc(0.2 * (1011px + 36px));
+            height: 702px;
+            float: left;
+        }
+
+        .content {
+            width: calc(0.6 * (1011px + 36px));
+            height: 702px;
+            float: left;
+            text-align: center;
+        }
+
+        .right-menu {
+            width: calc(0.2 * (1011px + 36px));
+            height: 702px;
+            float: left;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        table {
+            width: 95%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 3px 20px;
+            
+        }
+        th {
+            color: Lime;
+        }
+        tr:nth-child(even) {
+            color: Orange;
+        }
+        .del-btn {
+            width: 60px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="banner">
+            <img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\Banner.png" alt="Banner">
+        </div>
+        <div>
+            <div class="left-menu">
+                <img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\LeftMenu.png" alt="LeftMenu">
+            </div>
+            <div class="content">
+                <h2>Thông tin sinh viên</h2>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>MSSV</th>
+                        <th>Họ và tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Quê quán</th>
+                        <th>Xóa</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>0196266</td>
+                        <td>Trịnh Hùng Mạnh</td>
+                        <td>21/06/2003</td>
+                        <td>Nam</td>
+                        <td>Bắc Ninh</td>
+                        <td><button class="del-btn">Xóa</button></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>0189366</td>
+                        <td>Hoàng Trung Hiếu</td>
+                        <td>10/10/2003</td>
+                        <td>Nam</td>
+                        <td>Thanh Hóa</td>
+                        <td><button class="del-btn">Xóa</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right-menu">
+                <img src="D:\TestLinkUnder\web_HTML+CSS+JS\Hoa_Dua_Sac\anhHoa\RightMenu.png" alt="LeftMenu">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
