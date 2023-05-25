@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <form action="" name="f">
+    <form action="trangchu.html" name="f" onsubmit="return check()">
         <h1 align="center">Trang đăng nhập</h1>
         <table align="center">
             <tr  style="width: 100%; text-align: center;" >
@@ -20,7 +20,7 @@
                 <td><input type="password" name="txtPassword"></td>
             </tr>
             <tr>
-                <td style="text-align: right;"><input type="submit" value="Đăng nhập" onclick="return check() "></td>
+                <td style="text-align: right;"><input type="submit" value="Đăng nhập"></td>
                 <td><input type="reset" value="Hủy"></td>
             </tr>
         </table>
@@ -28,6 +28,12 @@
     <script>
         var username = "manhth"
         var password = "0196266"
+
+        let count = 0;
+        let btn_login = document.querySelectorAll('.')
+        function checkLoginTime(){
+
+        }
         function check(){
             i = 0;
             j = 0;

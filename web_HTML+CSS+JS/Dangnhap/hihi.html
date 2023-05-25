@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login form</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+            font-size: 17px;
+            width: 100%;
+            height: 100vh;
+            }
+            h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            }
+            
+            .login{
+                width: 400px;
+                margin: auto;
+                padding: 10px 40px;
+                background: rgba(30, 165, 243, 0.2);
+                border: 1px solid rgba(38, 194, 17, 0.2);
+            }
+            
+            .form-user input {
+            height: 30px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-size: 16px;
+            }
+            
+            .form-pass input {
+            height: 30px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-size: 16px;
+            }
+
+            
+
+        .form-btn {
+            margin-left: 32px;
+            margin-top: 18px;
+            position: relative;
+        }
+
+        .form-btn input {
+            height: 25px;
+            padding: 0 5px;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(53, 155, 218);
+            border-radius: 6px;
+            
+            
+        }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="login">
+            <form action="" name="f" method="get">
+                <h1 class="form1">Registration</h1>
+                <div class="form-user">
+                    <label for="txtusername" class="label">Username</label><br>
+                    <input type="text" class="txtusername">
+                </div>
+                <div class="form-pass">
+                    <label for="txtpassword" class="label2">Password</label><br>
+                    <input type="password" class="txtpassword">
+                </div>
+
+                <div class="form-btn">
+                    <input type="submit" value="Đăng nhập">
+                    <input type="reset" value="Hủy">
+                    <span id="countdown"></span>
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>

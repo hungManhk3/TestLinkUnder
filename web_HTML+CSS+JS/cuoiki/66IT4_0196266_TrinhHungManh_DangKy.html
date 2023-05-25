@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {}
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: beige;
+            padding-left: 32px;
+        }
+
+        .heading-1 {
+            color: #914939;
+            padding-top: 12px;
+            padding-bottom: 24px;
+        }
+
+        .content {}
+
+        .content h5 {
+            margin: 8px 0;
+        }
+
+        .content p {
+            margin-left: 13px;
+            margin-bottom: 4px;
+            display: flex;
+        }
+
+        .content p label {
+            width: 10%;
+            color: blue;
+        }
+
+        .content p input {
+            width: 13%;
+        }
+
+        .content p span {
+            color: red;
+        }
+
+        .content-3 {}
+
+        .content-3 h5 {
+            margin: 8px 0;
+        }
+
+        .content-3 p {
+            margin-bottom: 4px;
+        }
+
+        .content-3 p label {
+            color: blue;
+            padding-left: 16px;
+
+        }
+
+        .content-4 {}
+
+        .content-4 h5 {
+            margin: 8px 0;
+        }
+
+        .content-4 p {
+            margin-bottom: 4px;
+            display: flex;
+        }
+
+        .content-4 label {
+            width: 10%;
+        }
+
+        .content-4 span {
+            color: red;
+        }
+
+        .btn-container {
+            margin: 10px 0;
+        }
+
+        .submit-btn {
+            padding: 6px 13px;
+        }
+
+        .reset-btn {
+            margin-left: 6px;
+            padding: 6px 13px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h5 class="heading-1">Technology Discussion Forum Registration</h5>
+        <div class="content">
+            <h5>Registration Information</h5>
+            <p>
+                <label for="">E-Mail Address: </label>
+                <input class="email" type="text"><span>*</span>
+            </p>
+            <p>
+                <label for="">Display Name: </label>
+                <input class="name" type="text"><span>*</span>
+            </p>
+            <p>
+                <label for="">Password: </label>
+                <input class="pwd" type="password"><span>*</span>
+            </p>
+            <p>
+                <label for="">Confirm Password: </label>
+                <input class="cfpwd" type="password"><span>*</span>
+            </p>
+        </div>
+
+        <div class="content">
+            <h5>Profile Information</h5>
+            <p>
+                <label for="">ICQ Number: </label>
+                <input class="icq" type="text"><span>
+            </p>
+            <p>
+                <label for="">AIM Number: </label>
+                <input type="text"><span>
+            </p>
+            <p>
+                <label for="">Website: </label>
+                <input type="text"><span>
+            </p>
+            <p>
+                <label for="">Location: </label>
+                <input type="text"><span>
+            </p>
+            <p>
+                <label for="">Occupation: </label>
+                <input type="text"><span>
+            </p>
+        </div>
+
+        <div class="content-3">
+            <h5>Preferences</h5>
+            <p>
+                <label for="">Newsletter:</label> <input class="news-checkbox" type="checkbox"> Like to receive a
+                regular Newsletters
+            </p>
+            <p class="always">
+                <label for="">Always notify me of repies:</label>
+                <input type="radio">Yes <input type="radio">No
+
+            </p>
+            <p class="always">
+                <label for="">Always notify me of repies: </label>
+                <input type="radio">Yes <input type="radio">No
+
+            </p>
+            <p class="always">
+                <label for="">Always allow HTML: </label>
+                <input type="radio">Yes <input type="radio">No
+
+            </p>
+            <p>
+                <label for="">Board Language: </label>
+                <select name="" id="">
+                    <option value="">English</option>
+                    <option value="">Vietnam</option>
+                    <option value="">China</option>
+                    <option value="">Other</option>
+
+                </select>
+            </p>
+            <p>
+                <label for="">Board Style: </label>
+                <select name="" id="">
+                    <option value="">digestTheme</option>
+                    <option value="">lowTheme</option>
+                    <option value="">upTheme</option>
+                    <option value="">standTheme</option>
+
+                </select>
+            </p>
+            <p>
+                <label for="">Time Zone: </label>
+                <select name="" id="">
+                    <option value="">GMT+0</option>
+                    <option value="">GMT+1</option>
+                    <option value="">GMT+2</option>
+                    <option value="">GMT+3</option>
+                    <option value="">GMT+4</option>
+                    <option value="">GMT+5</option>
+                    <option value="">GMT+6</option>
+                    <option value="">GMT+7</option>
+                    <option value="">GMT+8</option>
+                    <option value="">GMT+9</option>
+                    <option value="">GMT+10</option>
+                    <option value="">GMT+11</option>
+                    <option value="">GMT+12</option>
+                    <option value="">GMT+13</option>
+                    <option value="">GMT+14</option>
+                    <option value="">GMT+15</option>
+                    <option value="">GMT+16</option>
+                    <option value="">GMT+17</option>
+                    <option value="">GMT+18</option>
+                    <option value="">GMT+19</option>
+                    <option value="">GMT+20</option>
+                    <option value="">GMT+21</option>
+                    <option value="">GMT+22</option>
+                    <option value="">GMT+23</option>
+
+
+
+                </select>
+
+            </p>
+        </div>
+
+        <div class="content-4">
+            <h5>Security Control Panel</h5>
+            <p>It is important you think before filling this in. You will not be able to change these at will. You need
+                an
+                <br> admins approval to change them, for security purposes.
+            </p>
+            <p>
+                <label for="">Security Question:</label> <input type="text"><span>*</span>
+            </p>
+            <p>
+                <label for="">Security Answer:</label> <input type="text"><span>*</span>
+            </p>
+        </div>
+        <p class="btn-container">
+            <button class="submit-btn">Submit</button>
+            <button class="reset-btn">Reset</button>
+        </p>
+
+    </div>
+
+    <script>
+        const newsCheckbox = document.querySelector('.news-checkbox')
+        const alwaysDisabled = document.querySelectorAll('.always')
+        const pwd = document.querySelector('.pwd')
+        const cfpwd = document.querySelector('.cfpwd')
+        const icq = document.querySelector('.icq')
+        const name = document.querySelector('.name')
+        const email = document.querySelector('.email')
+        const inputField = document.querySelectorAll('input')
+
+        const submitBtn = document.querySelector('.submit-btn')
+
+
+    </script>
+</body>
+
+</html>

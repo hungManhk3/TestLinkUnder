@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trinh hung manh</title>
+    <style>
+        #form{
+            width: 400px;
+            margin: auto;
+            padding: 10px 40px;
+            background: rgba(213, 225, 236, 0.2);
+            border: 1px solid rgba(1, 10, 18, 0.2);
+        }
+        #form.txt{
+            width: 400px; padding: 6px;
+            border: 1px solid rgba(141, 165, 187, 0.2);
+        }
+        #form fieldset{
+            border: 1px solid rgba(141, 165, 187, 0.2);
+            margin-top: 0;
+        }
+        #form #dangky{
+            width: 100px; height: 40px; border: none;
+            background: rgba(8, 61, 56, 0.2);
+        }
+        
+        #form #baoloi{
+            margin: 0 auto;color: red;
+        }
+       
+        #form .loi{
+            width: 400px; padding: 6px;
+            border: 1px solid rgba(162, 10, 10, 0.2);
+            background-color: rgb(47, 183, 207);
+
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form">
+        <h1>Dang Ky Thanh Vien</h1>
+        <p>
+            <label>Ma sinh vien</label><br>
+            <input id="maSV" type="text" class="txt">
+        </p>
+        <p>
+            <label>Ho va ten</label><br>
+            <input id="hoten" type="text" class="txt">
+        </p>
+        <p>
+            <label>Email</label><br>
+            <input id="email" type="text" class="txt">
+        </p>
+        <p>
+            <fieldset id="fs1">
+                <legend>Gioi tinh</legend>
+                <input type="radio" name="rgt" value="1"><label>Nam</label>
+                <input type="radio" name="rgt" value="0"><label>Nu</label><br>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset id="fs2">
+                <legend>So thich</legend>
+                <input type="checkbox" name="cbst"><label>Doc sach</label>
+                <input type="checkbox" name="cbst"><label>Xem phim</label>
+                <input type="checkbox" name="cbst"><label>Nghe nhac</label>
+                <input type="checkbox" name="cbst"><label>Fix bug</label>
+                <input type="checkbox" name="cbst"><label>Khac</label>
+            </fieldset>
+        </p>
+      
+        <p>
+            <fieldset id="fs3">
+                <legend>Quoc tich</legend>
+                <select id="quoctich" class="txt">
+                    <option value="0">chon quoc tich</option>
+                    <option value="1">Viet Nam</option>
+                    <option value="2">Japan</option>
+                    <option value="3">Switzerland</option>
+                </select>
+            </fieldset>
+        </p>
+        <p>
+            <label>Ghi chu</label><br>
+            <textarea id="ttghichu" clos="60" rows="6" class="txt"></textarea>
+        </p>
+        <div id="baoloi"></div>
+        <button type="button" id="dangky" onclick="return check()">Dangky</button>
+    </form>
+</body>
+<script>
+    function check(){
+        let loi="";
+        //ma sinh vien
+        let masv = document.getElementById('maSV');
+        if(masv.value==""){
+            masv.className='loi';
+            loi += "Ma sinh vien khong duoc bo trong<br>";
+        }
+        else if(masv.value.length!= 7){
+            masv.className='loi';
+            loi += "Ma sinh vien khong khong dung 7 ki tu<br> ";
+        }
+        else masv.className="txt";
+        // ho ten
+        let hoten = document.getElementById('hoten');
+        if(hoten.value==""){
+            hoten.className='loi';
+            loi += "Ho ten khong duoc bo trong<br>";
+        }
+        else if(masv.value.length > 21){
+            masv.className='loi';
+            loi += "Ho ten dai ";
+        }
+        else hoten.className="txt";
+        // email
+        let email = document.getElementById('email');
+        if(email.value==""){
+            email.className='loi';
+            loi += "Email khong duoc bo trong <br>";
+        }
+        else email.className="txt";
+        // gioi tinh
+        dem = 0;
+        let arr_gt = document.getElementsByName("rgt");
+        for(i = 0; i<arr_gt.length; i++){
+            if(arr_gt[i].checked) dem++;
+        }
+        if(dem == 0){
+            document.getElementById("fs1").className='loi';
+            loi += "Phai chon goi tinh<br>" ; 
+        }
+        else document.getElementById("fs1").className="";
+
+        // so thich
+        demm = 0;
+        let arr_sothich = document.getElementsByName("cbst");
+        for(i = 0; i<arr_sothich.length; i++){
+            if(arr_sothich[i].checked) demm++;
+        }
+        if(demm == 0){
+            document.getElementById("fs2").className='loi';
+            loi += "Phai chon it nhat 1 so thich<br>" ; 
+        }
+        else document.getElementById("fs2").className="";
+        // quoc tich
+        let qt = document.getElementById("quoctich")
+        if(qt.value==0){
+            qt.className='loi';
+            loi += "Phai chon quoc tich <br>"
+        }else qt.className="txt";
+        // kiem tra ghi chu
+        let gc = document.getElementById('ttghichu');
+        if(gc.value.length > 221){
+            gc.className='loi';
+            loi+= "Ghi chu phai duoi 221 ky tu";
+        } else gc.className='txt';
+
+        if(loi!= ""){
+            document.getElementById('baoloi').innerHTML=loi;
+            setTimeout("document.getElementByTd('baoloi').innerHTML=''",1000);
+            return false;
+        }
+    }
+</script>
+</html>
